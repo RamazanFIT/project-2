@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Voxpop</title>
+  </head>
+  <body>
+    <td><a href="/">Go back</a></td> <br><br>
+    Theme : {{theme}}
+
+    
+    {% for info in information %}
+        <table>
+
+            <tr>
+                
+            <td>
+                ...<br>  
+                Type_of_comment : {{info.type}} <br>
+                {{ info.comment }}<br>  
+                ...
+            </td>
+            </tr>
+            <br>  <br>
+            
+        </table>
+    {% endfor %}
+    <br>
+    <td><a href="/{{theme}}?page={{next_page}}">Далее</a></td>
+  </body>
+</html>

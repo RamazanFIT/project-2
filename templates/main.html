@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <title>REDDIT_V2</title>
+  </head>
+  <body>
+ 
+    <form action="/download" method="post">
+    Добавить коммент: <input type="text" name="comment" required> <br> 
+    К теме: <input type="text" name="theme" required> <br>
+    Тип: <input type="text" name="type" required value= "positive or negative" > 
+        <input type="submit" value="submit">
+        
+    </form>
+    <br>
+    Themes:
+    <br>
+    {% for theme in themes %}
+
+      <td><a href="/{{theme}}">{{theme}}</a></td>
+      <br>
+    {% endfor %}
+    <br>
+    <td><a href="/?page={{next_page}}">Далее</a></td>
+  </body>
+</html>
